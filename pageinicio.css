@@ -1,0 +1,712 @@
+
+html{
+  user-select: none;
+}
+
+img:hover{
+  outline: transparent;
+}
+
+* {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+/*el puntero se convierte en otra cosa*/
+.botonCompra button:active{
+ 
+  cursor: wait; 
+  
+}
+
+a:visited {
+  color: green;
+}
+
+
+:focus {
+    outline: 2px solid #898b89;
+}
+
+/*PONER ESTOS ICONOS DE COLOR #850E35*/
+.user img,
+.translate img,
+.menuPeque img {
+  filter: invert(12%) sepia(32%) saturate(7238%) hue-rotate(325deg)
+    brightness(99%) contrast(100%);
+}
+
+.redesSocialesFooter img {
+  filter: invert(12%) sepia(28%) saturate(6736%) hue-rotate(102deg)
+    brightness(95%) contrast(97%);
+}
+
+/*AGREGAR NUEVOS TIPOS DE LETRAS*/
+.container {
+  display: grid;
+  grid-template-areas:
+    "cabecera "
+    "menu "
+    "page "
+    "infoContactoFooter";
+  text-align: center;
+}
+
+.page {
+  text-align: center;
+  grid-area: page;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/*TENGO Q VER PQ ASI M QUITA LOS BORDES D TODO*/
+.translate button,
+.cabeceraPeque .user button,
+.cabeceraPeque .menuPeque button {
+  background: none;
+  /* border: none; */
+}
+
+.seccion {
+  text-align: center;
+  grid-area: seccion;
+
+  /*background-color: #ffffff;*/
+}
+
+.libros {
+  display: flex;
+  justify-content: flex-start;
+  
+  align-items: center;
+  min-height: 540px;
+  grid-area: libros;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  /*   margin-left: 25px;*/
+}
+
+
+
+.libro {
+  
+  display: grid;
+  min-width: 180px;
+  grid-template-areas:
+    "imgLibro"
+    "descripcion"
+    "precio"
+    "botonCompra";
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+img {
+  max-width: 30px;
+}
+
+.imgLibro img {
+  min-width: 140px;
+}
+
+#logoCabecera {
+  max-width: 70px;
+}
+
+.cabecera {
+  grid-area: cabecera;
+  min-height: 80px;
+  background-color: #fdb9b9;
+}
+
+div .cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.cabeceraOk {
+  max-width: 1000px;
+  min-height: 80px;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  grid-area: menu;
+  min-height: 44px;
+  max-height: 50px;
+  background-color: #ffe6e6;
+}
+
+.menuOk {
+  max-width: 1000px;
+  min-height: 44px;
+  max-height: 50px;
+  margin: auto;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuOk label {
+  font-weight: bolder;
+}
+
+.menuDesplegable {
+  display: flex;
+  /* align-items: center;
+    background: none;
+    border: none;*/
+}
+
+
+.barraBusqueda,
+.user,
+.cesta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabeceraOk .user a {
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding-left: 20px;
+  border-color: transparent;
+
+  background-color: #ffe6e6;
+}
+
+.cabeceraOk .user a:hover {
+  background-color: #e5e2d8;
+  border-color: #034004;
+}
+
+.cabeceraOk .translate button:focus {
+  background-color: #e5e2d8;
+  border-color: #034004;
+}
+
+.cabeceraOk .translate button {
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-color: transparent;
+  background-color: #ffe6e6;
+}
+
+.cabeceraOk .translate button:hover {
+  background-color: #e5e2d8;
+}
+
+.barraBusqueda img {
+  max-width: 20px;
+}
+
+.publi {
+  grid-area: publi;
+  min-height: 300px;
+  display: grid;
+  background-image: url("imagenpubli.jpg");
+  align-items: flex-end;
+  padding-bottom: 2%;
+}
+
+.cabecera h1 {
+  color: #850e35;
+}
+
+.infoPubli {
+  display: flex;
+  justify-content: space-around;
+  min-height: 90px;
+  background-color: #e1f2d3;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.textoPubli {
+  display: grid;
+  font-size: large;
+  padding-bottom: 2%;
+  color: #034004;
+}
+
+.tituloSeccion {
+  grid-area: tituloSeccion;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 0px;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-weight: bold;
+  font-size: large;
+  color: #293845;
+}
+
+hr {
+  border: 2px solid #fb7f7f;
+}
+
+.tituloSeccion a {
+  background-color: #ffffff;
+  border-color: transparent;
+}
+
+.tituloSeccion a:hover {
+  background-color: #ffffff;
+
+  height: 50px;
+}
+
+.imgLibro {
+  grid-area: imgLibro;
+  min-height: 220px;
+
+  margin: 10px;
+}
+
+.libro button {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.imgLibro img {
+  border: 2px solid transparent;
+}
+
+.imgLibro img:hover {
+  border: 2px solid #850e35;
+}
+
+div .libro {
+  border: 5px solid transparent;
+}
+
+div .libro:hover {
+  border: 5px outset #ffe6e6;
+  background-color: #f2f1eb;
+}
+
+.botonCompra button:hover {
+  background-color: #8BC34A;
+  border-color: #034004;
+}
+
+.descripcion {
+  grid-area: descripcion;
+  min-height: 70px;
+  margin-bottom: 5%;
+  padding-top: 15px;
+  color: #293845;
+}
+
+.descripcion div {
+  padding: 2px;
+}
+
+.descripcion .tituloLibro label,
+.descripcion .autor label{
+  font-weight: bold;
+  
+}
+
+.precio {
+  grid-area: precio;
+  min-height: 30px;
+  margin-bottom: 5%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botonCompra {
+  grid-area: botonCompra;
+  min-height: 30px;
+  margin-bottom: 5%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.botonCompra img {
+  margin-left: 15px;
+}
+
+.botonCompra button {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  background-color: #e1f2d3;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #a1c298;
+}
+
+.botonNovedades {
+  display: grid;
+  align-self: center;
+}
+
+.botonNovedades a {
+  color: #034004;
+  background-color: #a1c298;
+
+  font-weight: bold;
+  border-radius: 80px;
+  border: 2px solid #034004;
+  padding: 10px;
+  font-size: large;
+}
+
+.botonNovedades button {
+  background-color: transparent;
+  border: transparent;
+}
+
+.botonNovedades a:hover {
+  background-color: #ffe6e6;
+
+  font-weight: bold;
+  border-radius: 80px;
+  color: #850e35;
+  border: 2px outset #fdb9b9;
+  padding: 10px;
+}
+
+.menu div a {
+  text-decoration: none;
+  color: #850e35;
+  font-weight: bold;
+  
+  padding: 10px;
+  display: block;
+}
+
+.cabeceraOk .user img {
+  padding-right: 10px;
+}
+
+.cabeceraOk .user a {
+  text-decoration: none;
+  color: #850e35;
+  font-weight: bold;
+  
+  padding: 10px;
+}
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+}
+
+.menuDesplegable div a:hover {
+  background: #fdb9b9;
+}
+
+ul li:hover {
+  background: #fdb9b9;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+
+ul li ul li {
+  background: #f2f1eb;
+  display: block;
+}
+
+ul li ul li a {
+  display: block !important;
+
+  color: #293845;
+}
+
+ul li ul li:hover {
+  background: #e5e2d8;
+}
+
+#searchCabecera {
+  height: 25px;
+  width: 350px;
+}
+
+.barraBusqueda button {
+  height: 25px;
+  font-weight: bold;
+}
+
+.cesta a {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.cesta a:hover {
+  background-color: #fdb9b9;
+}
+
+.cesta label {
+  padding-right: 15px;
+}
+
+#contador, #contadorPeque {
+  border: 1px solid #293845;
+  color: #034004;
+  background-color: #f2f1eb;
+  border-radius: 60px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  left: -17px;
+  bottom: -13px;
+  font-size: smaller;
+  font-weight: bold;
+  z-index: 0;
+}
+
+.infoContactoFooter {
+  grid-area: infoContactoFooter;
+  background-color: #ffe6e6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  color: #034004;
+}
+
+.telefonosFooter {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.infoContactoFooter .tituloContactoFooter label {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.telefonosFooter label {
+  padding-bottom: 5px;
+}
+
+.telefonosFooter #ciudad {
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.redesSocialesFooter {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.redesSocialesFooter a {
+  display: flex;
+  background-color: #ffe6e6;
+  border-color: transparent;
+  padding-left: 30px;
+  /* align-items: center;
+    justify-content: space-between;*/
+}
+
+.redesSocialesFooter label {
+  color: #034004;
+  margin-right: 20px;
+  padding: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.infoContactoFooter .redesSocialesFooter a {
+  border-radius: 10px;
+  padding: 5px;
+  background: none;
+}
+
+.infoContactoFooter .redesSocialesFooter a:hover {
+  border-radius: 10px;
+  padding: 5px;
+  background: #fdb9b9;
+}
+
+@media only screen and (max-width: 1000px) {
+    div .cabeceraPeque .logoIcons button {
+        border-color: transparent;
+        padding-top: 5px;
+        border-radius: 10px;
+    }
+   
+
+  
+
+   .cabeceraPeque .user a {
+    text-decoration: none;
+    padding: 5px;
+      display: inline-block;
+      color: #850e35;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      border: 2px solid;
+      border-color: transparent;
+    }
+
+
+    div .logoIcons button:hover,
+    .logoIcons #menuPeque:hover {
+      border-radius: 10px;
+      background-color: #ffe6e6;
+      border-color: #850e35;
+    }
+    
+    
+   .cabeceraPeque .user a:hover {
+      background-color: #ffe6e6;
+      border-color: #850e35;
+    }
+    
+
+ 
+
+  .publi,
+  .menu {
+    display: none;
+  }
+
+  .libros {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 25px;
+  }
+
+  #tituloCabeceraPeque {
+    font-size: x-large;
+  }
+
+  #logoCabeceraPeque {
+    min-width: 50px;
+  }
+
+  .cabeceraPeque {
+    display: grid;
+    margin: auto;
+    min-height: 100px;
+    padding: 1%;
+  }
+
+  .cabeceraOk {
+    display: none;
+  }
+
+  .logoIcons,
+  .buscar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+
+  /*IMPORTANTE BARRABUSQUEDA,*/
+  .barraBusqueda {
+    border: 1px solid #293845;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #searchCabeceraPeque {
+    height: 25px;
+    width: 350px;
+    border: 1px transparent;
+  }
+
+  .barraBusqueda button {
+    display: flex;
+    align-items: center;
+    border: 1px transparent;
+    background-color: #ffffff;
+  }
+
+  .barraBusqueda button:hover {
+    background-color: #e5e2d8;
+  }
+
+
+  .page .textoPubliPeque {
+    display: grid;
+    background-color: #e1f2d3;
+    border: 1px solid #a1c298;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .page .textoPubliPeque #labelBold {
+    font-weight: bold;
+  }
+
+  .tituloSeccion {
+    min-height: 10%;
+    margin-top: 5%;
+  }
+
+  .tituloSeccion a:hover {
+    background-color: #d5dee4;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .telefonosFooter,
+  .tituloContactoFooter {
+    display: none;
+  }
+
+  .infoContactoFooter {
+    padding: 1%;
+  }
+
+ 
+  .container .infoContactoFooter {
+    display: grid;
+    justify-content: space-around;
+  }
+
+ 
+
+  .redesSocialesFooter {
+    display: grid;
+    background-color: #ffe6e6;
+    border-color: transparent;
+    padding-left: 5%;
+  }
+}

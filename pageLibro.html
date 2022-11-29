@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Página de libro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="pagelibro.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cabecera">
+            <div class="cabeceraOk">
+
+                <div><img alt="logo" id="logoCabecera" src="logo.png"></div>
+                <div>
+                    <h1 id="tituloCabecera">LIBRERÍA LOV</h1>
+                </div>
+               
+
+                <!--CREAR PATRON PARA QUE NO PUEDAN METER CODIGO RARO, POSIBILITAR BUSQUEDA-->
+                <div class="barraBusqueda"> <label><input type="search" id="searchCabecera" name="busqueda"
+                        placeholder="Busca por título, autor, género..."
+                        aria-label="Busca por título, autor, género..."></label><button><img src="iconlupa.png"
+                            alt="icono lupa"></button>
+
+                </div>
+
+
+                <div class="user"><a href="identificate.html"><img src="iconuser.png"
+                            alt="icono usuario">IDENTIFÍCATE</a></div>
+                <div class="translate"><button><img src="icontranslate.png" alt="icono traducir"></button></div>
+
+            </div>
+
+            <div class="cabeceraPeque" hidden>
+                <div class="logoIcons">
+                    <div class="menuPeque"><button><img src="iconmenu.png" alt="icono menu"></button></div>
+                    <div><img id="logoCabeceraPeque" src="logo.png" alt="logo"></div>
+                    <div>
+                        <h1 id="tituloCabeceraPeque">LIBRERÍA LOV</h1>
+                    </div>
+                    <div class="user">
+                        <div><button id="botonTranslatePeque"><img src="icontranslate.png"
+                                    alt="icono traducir"></button></div>
+                        <div><a href="identificate.html"><img src="iconuser.png" alt="icono usuario"></a></div>
+                        <div id="cestaPeque"><a href="cesta.html"><img src="iconbag.png" alt="icono cesta"></a>
+                        </div>
+                        <p id="contadorPeque">2</p>
+                    </div>
+                </div>
+                <div class="buscar">
+                    <div class="barraBusqueda"><label><input id="searchCabeceraPeque" name="busqueda" type="search"
+                            placeholder="Busca por título, autor, género..."></label><button><img src="iconlupa.png"
+                                alt="icono lupa"></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menuOk">
+
+                <div class="menuDesplegable">
+
+                    <div><a href="index.html">Inicio</a></div>
+                    <ul>
+                        <li>
+                            <div><a tabindex="0" href="#">Libros</a></div>
+
+                            <ul>
+                                <li>
+                                    <a href="categoria.html">Ver Todos</a>
+                                </li>
+                                <li>
+                                    <a href="categoria.html">Categoría</a>
+                                </li>
+                                <li>
+                                    <a href="categoria.html">Categoría</a>
+                                </li>
+                                <li>
+                                    <a href="categoria.html">Categoría</a>
+                                </li>
+                                <li>
+                                    <a href="categoria.html">Categoría</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div><a href="#">Ebooks</a></div>
+
+                            <ul>
+                                <li>
+                                    <a href="categoriaebook.html">Ver Todos</a>
+                                </li>
+                                <li>
+                                    <a href="categoriaebook.html">Categoría</a>
+                                </li>
+                                <li>
+                                    <a href="categoriaebook.html">Categoría</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div><a href="librerias.html">Nuestras Librerías</a></div>
+                    <div><a href="ayuda.html" >Ayuda</a></div>
+                </div>
+                <label>Envío en 1 día gratis a partir de 19€</label>
+                <div class="cesta">
+                    <a href="cesta.html">CESTA</a><img src="iconbag.png" alt="icono cesta">
+                    <p id="contador">2</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="page">
+            <div class="libroSeleccionado">
+                <div class="informacionLibro">
+                    <div class="portadaLibro"><img src="mandragora.jpg" alt="portada Mandragora"></div>
+                    <div class="especificacionesLibro">
+                        <div><label id="tituloLibro" >MANDRAGORA</label></div>
+                        <div><label id="autor" >LAURA GALLEGO</label></div>
+                        <div class="caracteristicasLibro">
+                            <div class="label1">
+                                <div class="editorial">Editorial:</div>
+                                <div class="year">Año:</div>
+                                <div class="pag">Páginas:</div>
+                                <div class="isbn">ISBN:</div>
+                                <div class="formato">Formato:</div>
+                                
+                            </div>
+                            <div class="label2">
+                                <div class="editorial">ALGAR EDITORIAL</div>
+                                <div class="year">2016</div>
+                                <div class="pag">200</div>
+                                <div class="isbn">978-84-9142-033-0</div>
+                                <div class="formato">Tapa blanda</div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botonesLibro">
+                    <label>20.00 €</label>
+                    <div class="botonCompra"><button onclick="alert('Artículo añadido correctamente a la cesta')">AÑADIR A LA CESTA<img src="iconbagplus.png"
+                                alt="icono añadir cesta"></button></div>
+                    <div class="botonesflex">
+                        <div class="botonGuardar"><button>GUARDAR<img src="iconcorazon.png"
+                                    alt="icono corazon"></button>
+                        </div>
+                        <div class="botonCompartir"><button>COMPARTIR<img src="iconshare.png"
+                                    alt="icono compartir"></button></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sinopsisLibroSeleccionado">
+                <div><label>Sinopsis:</label></div>
+                <div>
+                    <hr>
+                </div>
+                <div>
+                    <p>El rey Héctor necesita un sabio nuevo para sustituir a Cornelius, que ha desaparecido en
+                        circunstancias muy extrañas. Su lugar en la corte será ocupado por Zacarías, un erudito muy
+                        prestigioso que va acompañado de su hija Miriam. La joven tratará de integrarse entre las
+                        doncellas y príncipes de la corte...</p>
+                </div>
+            </div>
+            <div class="botonesLibroPeque" hidden>
+                <label >20.00 €</label>
+                <div class="botonCompra"> <button onclick="alert('Artículo añadido correctamente a la cesta')">AÑADIR A LA CESTA<img src="iconbagplus.png"
+                            alt="icono añadir cesta"></button>
+                </div>
+                <div class="botonesflex">
+                    <div class="botonGuardar"><button>GUARDAR<img src="iconcorazon.png"
+                                    alt="icono corazon"></button></div>
+                    <div class="botonCompartir"><button>COMPARTIR<img src="iconshare.png"
+                                alt="icono compartir"></button></div>
+                </div>
+            </div>
+            <div class="masLibrosAutor">
+                <div class="tituloOtrosLibrosAutor">
+                    <label>Otros libros del autor:</label>
+                    <hr>
+                </div>
+                <div class="librosAutor">
+
+
+
+                    <div class="libroAutor"><a href="otroLibro.html"><img 
+                                src="mandragora.jpg" alt="portada libro"></a>
+                        <div class="infoLibro">
+                            <div class="tituloLibro"><label>MANDRAGORA</label></div>
+                            <div class=autor><label>Laura Gallego</label></div>
+                            <div class=editorial><label>ALGAR EDITORIAL</label></div>
+                            <div class=formato><label>Tapa blanda</label></div>
+                            <div class="precioComprar">
+                                <div class="precio" >20.00 €</div>
+                                <button class="botonCompra" onclick="alert('Artículo añadido correctamente a la cesta')"><img src="iconbagplus.png"
+                                        alt="icono añadir cesta"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="libroAutor"><a href="otroLibro.html"><img 
+                                src="mandragora.jpg" alt="portada libro"></a>
+                        <div class="infoLibro">
+                            <div class="tituloLibro"><label>MANDRAGORA</label></div>
+                            <div class=autor><label>Laura Gallego</label></div>
+                            <div class=editorial><label>ALGAR EDITORIAL</label></div>
+                            <div class=formato><label>Tapa blanda</label></div>
+                            <div class="precioComprar">
+                                <div class="precio" >20.00 €</div>
+                                <button class="botonCompra" onclick="alert('Artículo añadido correctamente a la cesta')"><img src="iconbagplus.png"
+                                        alt="icono añadir cesta"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="libroAutor"><a href="otroLibro.html"><img 
+                                src="mandragora.jpg" alt="portada libro"></a>
+                        <div class="infoLibro">
+                            <div class="tituloLibro"><label>MANDRAGORA</label></div>
+                            <div class=autor><label>Laura Gallego</label></div>
+                            <div class=editorial><label>ALGAR EDITORIAL</label></div>
+                            <div class=formato><label>Tapa blanda</label></div>
+                            <div class="precioComprar">
+                                <div class="precio" >20.00 €</div>
+                                <button class="botonCompra" onclick="alert('Artículo añadido correctamente a la cesta')"><img src="iconbagplus.png"
+                                        alt="icono añadir cesta"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="infoContactoFooter">
+            <div class="tituloContactoFooter">
+                <label>CONTACTO</label>
+            </div>
+            <div class="telefonosFooter">
+                <label >ALMERÍA</label>
+                <label>Teléfono: 950123123</label>
+                <label>GRANADA</label>
+                <label>Teléfono: 600123123</label>
+            </div>
+            <div class="redesSocialesFooter">
+                <a href="https://www.google.com/intl/es/gmail/about/"><img src="iconmail.png"
+                        alt="icono mail"></a><label>info@librerias_lov.com</label>
+                <a href="https://twitter.com/"><img src="icontwitter.png" alt="icono twitter"></a><a
+                    href="https://www.instagram.com/"><img src="iconinstagram.png" alt="icono instagram"></a>
+                <label>@librerias_lov</label>
+                <a href="https://es-es.facebook.com/"><img src="iconfacebook.png"
+                        alt="icono facebook"></a><label>Librerías Lov</label>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
